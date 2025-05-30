@@ -76,10 +76,6 @@ if __name__ == "__main__":
     size, and budget.\n
     """
 
-
-
-
-
     query = input(request_message)
     results = find_similar_wineries(query)
 
