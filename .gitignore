@@ -1,5 +1,16 @@
-.env
-env/
+# Ignore Python virtual environments
+venv/
+
+# Byte-compiled / cache files
 __pycache__/
-*.pyc
-*.DS_Store
+*.py[cod]
+
+# Environment variables
+.env
+
+# OS-specific files
+.DS_Store
+Thumbs.db
+
+# Jupyter/IPython files
+.ipynb_checkpoints/
