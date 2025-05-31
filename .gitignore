@@ -1,16 +1,11 @@
-# Ignore Python virtual environments
+# Python
 venv/
-
-# Byte-compiled / cache files
-__pycache__/
-*.py[cod]
-
-# Environment variables
 .env
+__pycache__/
 
-# OS-specific files
+# Node
+client/node_modules/
+
+# System files
 .DS_Store
 Thumbs.db
-
-# Jupyter/IPython files
-.ipynb_checkpoints/
