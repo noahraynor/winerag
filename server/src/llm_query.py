@@ -2,7 +2,7 @@
 import os
 from openai import OpenAI
 from instructor import from_openai
-from src.search_models import WinerySearchRequest
+from search_models import WinerySearchRequest
 from dotenv import load_dotenv
 
 load_dotenv()
