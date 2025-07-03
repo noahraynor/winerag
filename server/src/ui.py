@@ -1,7 +1,7 @@
 # ui.py
 import gradio as gr
-from .llm_query import parse_user_query
-from .retriever import find_similar_wineries
+from src.llm_query import parse_user_query
+from src.retriever import find_similar_wineries
 
 def handle_query(user_input):
     try:

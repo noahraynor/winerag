@@ -1,6 +1,8 @@
 # Python
+.venv/          # <— add this line
 venv/
 .env
+server/.env     # (optional) ignore the backend’s env file if you commit from repo root
 __pycache__/
 
 # Node
