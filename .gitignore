@@ -1,11 +1,21 @@
-# Python
-.venv/          # <— add this line
-venv/
-.env
-server/.env     # (optional) ignore the backend’s env file if you commit from repo root
+# --- Python virtual environments ---
+.venv/
+server/venv/
+
+# Compiled Python files
 __pycache__/
 
-# Node
+# IDE settings
+.vscode/
+
+# Gradio flagged data (test artifacts)
+server/.gradio/
+
+# Secrets / environment files
+.env
+server/.env
+
+# Node.js dependencies
 client/node_modules/
 
 # System files

@@ -1,13 +1,16 @@
 # src/llm_query.py
 import os
-from openai import OpenAI
-from instructor import from_openai
-from .search_models import WinerySearchRequest
 from dotenv import load_dotenv
+from openai import OpenAI
+# from langsmith import wrappers, traceable
+import instructor
+
+from .search_models import WinerySearchRequest
 
 load_dotenv()
 
-client = from_openai(OpenAI(api_key=os.getenv("OPENAI_API_KEY")))
+base_client = OpenAI(api_key=os.getenv("OPENAI_API_KEY"))
+client = instructor.patch(base_client)  # schema-aware
 
 def parse_user_query(user_input: str) -> WinerySearchRequest:
     
