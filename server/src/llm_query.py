@@ -2,7 +2,6 @@
 import os
 from dotenv import load_dotenv
 from openai import OpenAI
-# from langsmith import wrappers, traceable
 import instructor
 
 from .search_models import WinerySearchRequest
