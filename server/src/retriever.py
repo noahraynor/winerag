@@ -15,7 +15,7 @@ os.environ["PHOENIX_API_KEY"] = os.getenv("PHOENIX_API_KEY")
 os.environ["PHOENIX_COLLECTOR_ENDPOINT"] = os.getenv("PHOENIX_COLLECTOR_ENDPOINT")
 
 # Set up Phoenix tracing
-tracer_provider = register(protocol="http/protobuf", project_name="Wine Rag Auto", auto_instrument=True)
+tracer_provider = register(protocol="http/protobuf", project_name="Wine Rag 0722 730pm", auto_instrument=True)
 tracer = tracer_provider.get_tracer(__name__)
 
 API_KEY = os.getenv("OPENAI_API_KEY")
