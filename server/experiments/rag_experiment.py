@@ -17,7 +17,7 @@ df = pd.DataFrame({"user_query": [
 ]})
 
 # ── create a Phoenix client that targets Cloud ────────────────────────
-client = px.Client(endpoint="https://team5-phoenix.xyz")                    # reads PHOENIX_HOST & API key automatically
+client = px.Client()                    # reads PHOENIX_HOST & API key automatically
 #      └─ if you prefer to be explicit:
 # client = px.Client(endpoint=os.getenv("PHOENIX_HOST"))
 
@@ -57,7 +57,7 @@ exp = run_experiment(
     dataset=dataset,
     task=retrieval_task,
     evaluators=evaluators,
-    experiment_name="retriever_v21",
+    experiment_name="retriever_experiment",
 )
 
 print("View results ➜", exp.url)
