@@ -21,12 +21,14 @@ client = px.Client(endpoint="https://team5-phoenix.xyz")                    # re
 #      └─ if you prefer to be explicit:
 # client = px.Client(endpoint=os.getenv("PHOENIX_HOST"))
 
-dataset = client.upload_dataset(
-    dataframe=df,
-    input_keys=["user_query"],
-    output_keys=[],
-    dataset_name="wine-rag-queries-v12",
-)
+# dataset = client.upload_dataset(
+#     dataframe=df,
+#     input_keys=["user_query"],
+#     output_keys=[],
+#     dataset_name="wine-rag-queries-v12",
+# )
+
+dataset = client.get_dataset(name="wine-rag-queries-v13", version_id="RGF0YXNldFZlcnNpb246MTQ=")
 
 def retrieval_task(input):
     rows = find_similar_wineries(input["user_query"])        # already traced
