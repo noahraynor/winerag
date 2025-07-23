@@ -44,10 +44,20 @@ def retrieval_task(input):
 #     """
 #     return {"docs": [f"dummy-doc-for-{user_query}"]}
 
+
+# Return from retrieval_task is what is evaluated
+def exact_match(input, output) -> float:
+    print(output)
+    return 1.0 if len(output["docs"]) == 4 else 0.0
+
+# Store the evaluators for later use
+evaluators = [exact_match]
+
 exp = run_experiment(
     dataset=dataset,
     task=retrieval_task,
-    experiment_name="retriever_v12",
+    evaluators=evaluators,
+    experiment_name="retriever_v21",
 )
 
 print("View results ➜", exp.url)
