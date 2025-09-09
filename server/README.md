@@ -1,17 +1,3 @@
-run retreiver to test
-- activate venv from project root (source .venv/bin/activate)
-- navigate to winerag/server
-- python -m src.retriever
-
-
-
-
-
-
-
-
-- Maybe buy rag.wine
-
 # WineRag 🍷🤖
 
 A Retrieval-Augmented Generation (RAG) application that helps plan wine tours in Paso Robles.
